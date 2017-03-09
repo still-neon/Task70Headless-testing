@@ -22,7 +22,7 @@ public class LogIn {
 
         mailRuLoginPage.load();
 
-        //screen
+        //screen232223
 
         MailRuMailPage mailRuMailPage = mailRuLoginPage.login();
 
