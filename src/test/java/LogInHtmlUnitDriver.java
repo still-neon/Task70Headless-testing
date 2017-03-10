@@ -1,28 +1,25 @@
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import java.io.File;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-public class LogIn {
+
+
+public class LogInHtmlUnitDriver {
 
     private WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
-        driver = new FirefoxDriver();
+        driver = new HtmlUnitDriver();
+        //driver.setJavascriptEnabled(true);
     }
 
     @Test
     public void login() throws Exception{
 
         driver.get("https://192.168.100.26/");
-
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-
-        FileUtils.copyFile(scrFile, new File("D:\\screenshot.png"));
 
         WebElement username = driver.findElement(By.xpath(".//*[@id='Username']"));
         WebElement password = driver.findElement(By.xpath(".//*[@id='Password']"));
