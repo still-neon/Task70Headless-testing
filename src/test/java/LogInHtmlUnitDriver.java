@@ -1,19 +1,17 @@
 import org.openqa.selenium.*;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+//import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-
-
 public class LogInHtmlUnitDriver {
 
     private WebDriver driver;
-
+    /*
     @BeforeMethod
     public void setUp() {
         driver = new HtmlUnitDriver();
-        //driver.setJavascriptEnabled(true);
+        ((HtmlUnitDriver) driver).setJavascriptEnabled(true);
     }
 
     @Test
@@ -33,5 +31,5 @@ public class LogInHtmlUnitDriver {
         WebElement linkText = driver.findElement(By.xpath("//ins[text()='Sign Out']"));
 
         Assert.assertEquals("Sign Out",linkText.getText());
-    }
+   }*/
 }
